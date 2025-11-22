@@ -1,0 +1,19 @@
+.nav {
+  &__list {
+    display: flex;
+    gap: 32px 64px;
+  }
+
+  &--direction-column &__list {
+    flex-direction: column;
+  }
+
+  &__link {
+    @include page-text-style;
+
+    display: block;
+    color: $main-grey;
+
+    @include hover(transform, scale(1.1));
+  }
+}

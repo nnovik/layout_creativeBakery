@@ -1,0 +1,123 @@
+.button {
+  cursor: pointer;
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  text-decoration: none;
+
+  @include text-uppercase;
+
+  transition: all $effectDuration;
+  color: $accent-orange;
+
+  &:focus {
+    color: $dark-orange;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* =======================
+     ICON MODIFIER
+  ======================= */
+  &--with-icon {
+    &::before {
+      content: '';
+      display: block;
+      width: $icons-width-height;
+      height: $icons-width-height;
+      transition: background-image $effectDuration;
+    }
+  }
+
+  /* ICON TYPES */
+  &--cookie {
+    &.button--with-icon::before {
+      background-image: url('../images/icons/icon-cookie.svg');
+    }
+    &:focus::before {
+      background-image: url('../images/icons/icon-cookie-dark-orange.svg');
+    }
+    &.button--filled:hover::before,
+    &.button--filled:focus::before {
+      background-image: url('../images/icons/icon-cookie-white.svg');
+    }
+  }
+
+  /* PHONE */
+  &--phone {
+    &.button--with-icon::before {
+      background-image: url('../images/icons/icon-phone.svg');
+    }
+    &:focus::before {
+      background-image: url('../images/icons/icon-phone-dark-orange.svg');
+    }
+    &.button--filled:hover::before,
+    &.button--filled:focus::before {
+      background-image: url('../images/icons/icon-phone-white.svg');
+    }
+  }
+
+  /* ARROW */
+  &--arrow {
+    &.button--with-icon::before {
+      background-image: url('../images/icons/icon-arrow.svg');
+    }
+    &:focus::before {
+      background-image: url('../images/icons/icon-arrow-dark-orange.svg');
+    }
+    &.button--filled:hover::before,
+    &.button--filled:focus::before {
+      background-image: url('../images/icons/icon-arrow-white.svg');
+    }
+  }
+
+  /* =======================
+     FILLED STYLE
+  ======================= */
+  &--filled {
+    padding: 16px 70px;
+    border: 2px solid $accent-orange;
+    border-radius: 32px;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $accent-orange;
+      color: $main-white;
+    }
+
+    &:focus {
+      background-color: $dark-orange;
+      border-color: $dark-orange;
+      color: $main-white;
+    }
+  }
+
+  /* UNDERLINED */
+  &--underlined {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      width: 100%;
+      height: 1px;
+      transform: scaleX(0);
+      background-color: $accent-orange;
+      transition: transform $effectDuration;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX(1);
+    }
+
+    &:focus::after {
+      background-color: $dark-orange;
+    }
+  }
+}

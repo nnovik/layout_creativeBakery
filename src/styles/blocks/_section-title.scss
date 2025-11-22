@@ -1,0 +1,19 @@
+.section-title {
+  margin: 0;
+  padding: 0;
+  color: $main-theme-color;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 85%;
+  letter-spacing: -0.05em;
+  text-align: left;
+  text-transform: uppercase;
+
+  @include onTablet {
+    font-size: 56px;
+  }
+
+  @include onDesktop {
+    font-size: 72px;
+  }
+}

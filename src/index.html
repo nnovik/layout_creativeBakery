@@ -1,19 +1,469 @@
+<!--#region head-->
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  class="page"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Title</title>
+    <title>Bakerlab</title>
+    <link
+      rel="icon"
+      type="image/svg"
+      href="images/icons/icon-cookie.svg"
+    />
+
+    <!-- <link rel="icon" type="image/png" href="images/logo-2x.png"> -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="./styles/main.scss"
+      href="./styles/style.scss"
     />
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+  <!--#endregion-->
+  <body class="page__body">
+    <header class="header">
+      <div class="top-bar">
+        <a
+          href="#"
+          class="top-bar__logo-link"
+        >
+          <img
+            src="images/logo-2x.png"
+            alt="Bakerlab logo"
+            class="top-bar__logo"
+          />
+        </a>
+        <nav class="nav top-bar__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="#products"
+                class="nav__link"
+              >
+                Products
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#about-us"
+                class="nav__link"
+              >
+                About Us
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#"
+                class="nav__link"
+              >
+                Blog
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#"
+                class="button button--with-icon button--phone button--underlined"
+              >
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a
+          href="#menu"
+          class="icon icon--menu top-bar__icon"
+        ></a>
+      </div>
+
+      <div class="container">
+        <div class="header__content">
+          <p class="header__text">
+            We bake your fantasies — croissants, cakes, cookies, and cupcakes.
+          </p>
+          <div class="header__wrap">
+            <h1 class="header__title">Creative bakery</h1>
+            <img
+              src="images/header-img-cookie.svg"
+              alt="Cookie"
+              class="header__img"
+            />
+          </div>
+        </div>
+        <a
+          href="#"
+          class="button button--filled button--with-icon button--cookie header__button-main"
+        >
+          Learn more
+        </a>
+      </div>
+    </header>
+
+    <aside
+      class="menu page__menu"
+      id="menu"
+    >
+      <div class="top-bar">
+        <a
+          href="#"
+          class="top-bar__logo-link"
+        >
+          <img
+            src="images/logo-2x.png"
+            alt="Bakerlab logo"
+            class="top-bar__logo"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="icon icon--close"
+        ></a>
+      </div>
+      <nav class="nav menu__nav nav--direction-column">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a
+              href="#products"
+              class="nav__link"
+            >
+              Products
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#about-us"
+              class="nav__link"
+            >
+              About Us
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#"
+              class="nav__link"
+            >
+              Blog
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#contact-us"
+              class="button button--underlined button--with-icon button--phone"
+            >
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="container">
+        <div class="main__content">
+          <section
+            class="products"
+            id="products"
+          >
+            <h2 class="products__title section-title">What we bake</h2>
+            <p class="products__text">
+              We can customize our cookies right for your needs. Just imagine it
+            </p>
+
+            <div class="products__list">
+              <article class="product products__product">
+                <img
+                  src="images/products/photo1.png"
+                  alt="cakes"
+                  class="product__photo"
+                />
+                <div class="product__info">
+                  <h5 class="product__category">Cakes</h5>
+                  <p class="product__description">
+                    Oatmeal cookies with golden raisins, orange zest and
+                    chocolate chips
+                  </p>
+                </div>
+                <a
+                  class="button button--underlined button--with-icon button--arrow"
+                >
+                  Order
+                </a>
+              </article>
+              <article class="product products__product">
+                <img
+                  src="images/products/photo2.png"
+                  alt="cakes"
+                  class="product__photo"
+                />
+                <div class="product__info">
+                  <h5 class="product__category">Cakes</h5>
+                  <p class="product__description">
+                    Chocolate biscuit coffee cake topped with a buttercream and
+                    powder
+                  </p>
+                </div>
+                <a
+                  class="button button--underlined button--with-icon button--arrow"
+                >
+                  Order
+                </a>
+              </article>
+              <article class="product products__product">
+                <img
+                  src="images/products/photo3.png"
+                  alt="cakes"
+                  class="product__photo"
+                />
+                <div class="product__info">
+                  <h5 class="product__category">Donuts</h5>
+                  <p class="product__description">
+                    Light multi-layered croissant strewn with cinammon and
+                    almond “petals”
+                  </p>
+                </div>
+                <a
+                  class="button button--underlined button--with-icon button--arrow"
+                >
+                  Order
+                </a>
+              </article>
+              <article class="product products__product">
+                <img
+                  src="images/products/photo4.png"
+                  alt="cakes"
+                  class="product__photo"
+                />
+                <div class="product__info">
+                  <h5 class="product__category">Donuts</h5>
+                  <p class="product__description">
+                    Light multi-layered croissant strewn with coconut and nuts
+                  </p>
+                </div>
+                <a
+                  class="button button--underlined button--with-icon button--arrow"
+                >
+                  Order
+                </a>
+              </article>
+              <article class="product products__product">
+                <img
+                  src="images/products/photo5.png"
+                  alt="cakes"
+                  class="product__photo"
+                />
+                <div class="product__info">
+                  <h5 class="product__category">Cakes</h5>
+                  <p class="product__description">
+                    Cake with chocolate salted caramel, Vanilla frutti pebbles
+                    inside
+                  </p>
+                </div>
+                <a
+                  class="button button--underlined button--with-icon button--arrow"
+                >
+                  Order
+                </a>
+              </article>
+              <article class="product products__product">
+                <img
+                  src="images/products/photo6.png"
+                  alt="cakes"
+                  class="product__photo"
+                />
+                <div class="product__info">
+                  <h5 class="product__category">Cookies</h5>
+                  <p class="product__description">
+                    Oatmeal cookies with golden raisins, orange zest and
+                    chocolate chips
+                  </p>
+                </div>
+                <a
+                  class="button button--underlined button--with-icon button--arrow"
+                >
+                  Order
+                </a>
+              </article>
+            </div>
+          </section>
+
+          <section
+            class="about-us"
+            id="about-us"
+          >
+            <div class="about-us__content">
+              <h2 class="section-title about-us__title">Few words About us</h2>
+              <p class="about-us__text">
+                Like many design teams, Onfido made the transition from Abstract
+                + Sketch, to Figma in the last couple of years. One of the
+                common resistance points internally before making that switch,
+                was Figma&apos;s lack of Git-style branching that Abstract
+                enabled. The design team had come to rely on branching and had
+                built a lot of our processes around it.
+              </p>
+            </div>
+            <div class="about-us__facts">
+              <div class="about-us__fact">
+                <p class="about-us__fact-number">2015</p>
+                <p class="about-us__fact-text">Foundation year</p>
+              </div>
+              <div class="about-us__fact">
+                <p class="about-us__fact-number">23</p>
+                <p class="about-us__fact-text">Stores</p>
+              </div>
+              <div class="about-us__fact">
+                <p class="about-us__fact-number">155</p>
+                <p class="about-us__fact-text">Companies</p>
+              </div>
+              <div class="about-us__fact">
+                <p class="about-us__fact-number">10k+</p>
+                <p class="about-us__fact-text">Clients</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <nav class="footer__menu">
+            <a
+              href="#"
+              class="footer__logo-link"
+            >
+              <img
+                src="images/footer-logo-2x.png"
+                alt="Bakerlab logo"
+                class="footer__logo"
+              />
+            </a>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <h5 class="footer__list-title">Menu</h5>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#products"
+                  class="footer__link"
+                >
+                  Products
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#about-us"
+                  class="footer__link"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#"
+                  class="footer__link"
+                >
+                  Blog
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#"
+                  class="footer__link"
+                >
+                  Terms & Privacy
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <section
+            class="footer__contact-us"
+            id="contact-us"
+          >
+            <h2 class="section-title footer__title">Contact us</h2>
+            <div class="footer__contact-us-wrap">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <h5 class="footer__list-title">Call us</h5>
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="tel:(629) 555-0129"
+                    class="footer__link"
+                  >
+                    (629) 555-0129
+                  </a>
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="tel:(603) 555-0123"
+                    class="footer__link"
+                  >
+                    (603) 555-0123
+                  </a>
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="tel:(704) 555-0127"
+                    class="footer__link"
+                  >
+                    (704) 555-0127
+                  </a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <h5 class="footer__list-title">Email us</h5>
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="mailto:bakerlab@example.com"
+                    class="footer__link"
+                  >
+                    bakerlab@example.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__icons">
+            <a
+              href="#"
+              class="icon icon--facebook"
+            ></a>
+            <a
+              href="#"
+              class="icon icon--instagram"
+            ></a>
+            <a
+              href="#"
+              class="icon icon--twitter"
+            ></a>
+          </div>
+          <p class="footer__copyright">© Bakerlab 2022</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="scripts/main.js"></script>
   </body>
 </html>

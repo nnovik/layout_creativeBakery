@@ -1,0 +1,44 @@
+.icon {
+  display: block;
+
+  width: $icons-width-height;
+  height: $icons-width-height;
+
+  background-size: cover;
+
+  &--menu {
+    background-image: url(../images/icons/icon-menu.svg);
+  }
+
+  &--cookie {
+    background-image: url(../images/icons/icon-cookie.svg);
+  }
+
+  &--close {
+    background-image: url(../images/icons/icon-close.svg);
+  }
+
+  &--facebook {
+    background-image: url(../images/icons/icon-facebook.svg);
+
+    &:hover {
+      background-image: url(../images/icons/icon-facebook-white.svg);
+    }
+  }
+
+  &--instagram {
+    background-image: url(../images/icons/icon-instagram.svg);
+
+    &:hover {
+      background-image: url(../images/icons/icon-instagram-white.svg);
+    }
+  }
+
+  &--twitter {
+    background-image: url(../images/icons/icon-twitter.svg);
+
+    &:hover {
+      background-image: url(../images/icons/icon-twitter-white.svg);
+    }
+  }
+}

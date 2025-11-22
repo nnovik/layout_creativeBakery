@@ -1,0 +1,35 @@
+.products {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    @include pageGrid;
+
+    row-gap: 56px;
+    padding-top: 56px;
+
+    @include onTablet {
+      margin-bottom: 80px;
+      padding-top: 80px;
+    }
+  }
+
+  &__product {
+    grid-column: 1 / -1;
+
+    @include hover(transform, scale(1.01));
+
+    @include onTablet {
+      grid-column: span 4;
+    }
+
+    @include onDesktop {
+      grid-column: span 3;
+
+      &:nth-child(4n-1) {
+        grid-column: 3 / span 3;
+      }
+    }
+  }
+}
